@@ -3,9 +3,9 @@
 Functional food store for cats
 
 ## Usage
- ```bash
- npm i
+```bash
+npm i
 ```
 ```bash
- npm build
+npm build
 ```
