@@ -1,0 +1,24 @@
+.selection {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .selection {
+    width: 708px;
+  }
+
+  .selection__fields {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .selection {
+    width: 1220px;
+  }
+
+  .selection__fields {
+    padding: 0;
+  }
+}

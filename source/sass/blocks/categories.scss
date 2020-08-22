@@ -1,0 +1,275 @@
+.categories {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 17px;
+}
+
+.categories__list {
+  @include list-reset;
+}
+
+.categories__item {
+  position: relative;
+
+  margin-bottom: 20px;
+  padding: 30px 20px 19px 20px;
+
+  background-color: $palette-secondary;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $palette-tertiary;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+  }
+
+  &--losing-weight::after {
+    top: 22px;
+    left: 30px;
+
+    width: 35px;
+    height: 49px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--mass-gain::after {
+    top: 35px;
+    left: 13px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+}
+
+.categories__title {
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: 72px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  color: $color-secondary-font;
+}
+
+.categories__description {
+  position: relative;
+
+  margin: 0;
+  padding-bottom: 41px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    bottom: 19px;
+    left: 0;
+
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.categories__button {
+  position: relative;
+  z-index: 1;
+  padding-right: 33px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  color: $color-secondary-font;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    z-index: -1;
+
+    width: 33px;
+    height: 11px;
+
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+
+    transition-duration: 0.15s;
+  }
+
+  &:hover::after {
+    right: 0;
+  }
+}
+
+.categories__button-text {
+  padding-right: 14px;
+
+  background-color: $palette-secondary;
+}
+
+@media (min-width: $tablet-width) {
+  .categories {
+    width: 708px;
+    margin-bottom: 45px;
+  }
+
+  .categories__item {
+    box-sizing: border-box;
+
+    min-height: 372px;
+    margin-bottom: 30px;
+    padding: 77px 53px 58px 53px;
+
+    &::before {
+      top: 92px;
+      right: 62px;
+      left: auto;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--losing-weight::after {
+      top: 80px;
+      right: 92px;
+      left: auto;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    &--mass-gain::after {
+      top: 135px;
+      right: 28px;
+      left: auto;
+
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  .categories__title {
+    margin-bottom: 25px;
+    margin-left: 0;
+
+    font-size: 36px;
+  }
+
+  .categories__description {
+    position: static;
+
+    width: 340px;
+    padding-bottom: 55px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .categories__button {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      top: 10px;
+    }
+  }
+
+  .categories__button-text {
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories {
+    width: 1220px;
+    margin-bottom: 0;
+  }
+
+  .categories__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .categories__item {
+    width: 570px;
+    margin-bottom: 73px;
+
+    &:last-child {
+      margin-bottom: auto;
+    }
+
+    &::before {
+      top: 47px;
+      right: auto;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--losing-weight::after {
+      top: 41px;
+      right: auto;
+      left: 66px;
+
+      width: 70px;
+      height: 97px;
+    }
+
+    &--mass-gain::after {
+      top: 69px;
+      right: auto;
+      left: 34px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
+
+  .categories__title {
+    margin-bottom: 74px;
+    margin-left: 160px;
+  }
+
+  .categories__description {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+}

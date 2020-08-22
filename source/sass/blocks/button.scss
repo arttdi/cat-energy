@@ -1,0 +1,27 @@
+.button {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px;
+
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-interactive-text;
+
+  background-color: $palette-tertiary;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $palette-tertiary--dark;
+  }
+
+  &:active {
+    color: $color-interactive-text--lighten;
+
+    background-color: $palette-tertiary--dark;
+  }
+}

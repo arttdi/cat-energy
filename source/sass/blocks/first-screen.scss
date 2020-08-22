@@ -1,0 +1,130 @@
+.first-screen {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
+
+.first-screen__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  font-family: $font-secondary;
+  text-align: center;
+  color: #ffffff;
+}
+
+.first-screen__text {
+  margin: 0;
+  margin-bottom: 28px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.first-screen__product-picture {
+  margin: 0;
+  margin-bottom: 4px;
+
+  text-align: center;
+}
+
+.first-screen__product-picture img {
+  width: 280px;
+  height: 270px;
+
+  vertical-align: bottom;
+}
+
+.first-screen__button {
+  width: 100%;
+
+  font-size: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .first-screen {
+    position: relative;
+
+    margin-bottom: 0;
+    width: 708px;
+    min-height: 809px;
+  }
+
+  .first-screen__wrapper {
+    padding-left: 90px;
+  }
+
+  .first-screen__title {
+    width: 420px;
+    margin-bottom: 40px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: $color-secondary-font;
+  }
+
+  .first-screen__text {
+    margin-bottom: 48px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: $color-secondary-font;
+  }
+
+  .first-screen__product-picture {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    margin: 0;
+  }
+
+  .first-screen__product-picture img {
+    width: 709px;
+    height: auto;
+  }
+
+  .first-screen__button {
+    width: 245px;
+    padding: 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .first-screen {
+    width: 1220px;
+    min-height: 472px;
+    margin-bottom: 80px;
+  }
+
+  .first-screen__wrapper {
+    padding-left: 80px;
+  }
+
+  .first-screen__text {
+    margin-bottom: 53px;
+  }
+
+  .first-screen__product-picture {
+    top: -81px;
+    right: 218px;
+  }
+
+  .first-screen__product-picture img {
+    width: 552px;
+  }
+}
